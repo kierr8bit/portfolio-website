@@ -1,9 +1,11 @@
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
-import Navbar from "@/components/layout/navbar";
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "Modern portfolio built with Next.js",
+  title: "Summit Virtual Assistant Solutions",
+  description:
+    "Reliable virtual assistant services for growing businesses worldwide.",
 };
 
 export default function RootLayout({
@@ -15,7 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

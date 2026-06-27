@@ -1,0 +1,287 @@
+/* =====================================================
+   BridgeCore Virtual Solutions
+   Hero Section
+===================================================== */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f8fbff 0%, #f3f7fc 50%, #ffffff 100%);
+}
+
+/* ===========================
+   Background Blobs
+=========================== */
+
+.hero-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -180px;
+  right: -120px;
+
+  background: rgba(30, 91, 190, 0.15);
+
+  filter: blur(90px);
+
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+.hero-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  bottom: -180px;
+  left: -120px;
+
+  background: rgba(13, 27, 61, 0.08);
+
+  filter: blur(90px);
+
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+/* ===========================
+   Hero Badge
+=========================== */
+
+.hero-badge {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  background: #e8f1ff;
+
+  color: #1e5bbe;
+
+  font-weight: 600;
+
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   Hero Title
+=========================== */
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  color: #0d1b3d;
+
+  margin-top: 30px;
+}
+
+/* ===========================
+   Description
+=========================== */
+
+.hero-description {
+  margin-top: 30px;
+
+  max-width: 620px;
+
+  color: #5d6675;
+
+  font-size: 1.1rem;
+
+  line-height: 1.9;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  margin-top: 40px;
+}
+
+.primary-btn {
+  background: #1e5bbe;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 14px;
+
+  padding: 16px 34px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+
+  background: #164ea4;
+
+  box-shadow: 0 15px 35px rgba(30, 91, 190, 0.25);
+}
+
+.secondary-btn {
+  background: white;
+
+  color: #0d1b3d;
+
+  border: 1px solid #d9dce3;
+
+  border-radius: 14px;
+
+  padding: 16px 34px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  border-color: #1e5bbe;
+
+  color: #1e5bbe;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===========================
+   Statistics
+=========================== */
+
+.hero-stats {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 50px;
+
+  margin-top: 60px;
+}
+
+.hero-stat h2 {
+  color: #0d1b3d;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+}
+
+.hero-stat p {
+  margin-top: 6px;
+
+  color: #6d7481;
+}
+
+/* ===========================
+   Dashboard Card
+=========================== */
+
+.hero-dashboard {
+  position: relative;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  background: white;
+
+  border: 1px solid #edf1f6;
+
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
+
+  transition: 0.4s ease;
+}
+
+.hero-dashboard:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 60px 120px rgba(30, 91, 190, 0.15);
+}
+
+.hero-dashboard img {
+  width: 100%;
+
+  display: block;
+}
+
+/* ===========================
+   Floating Animation
+=========================== */
+
+@keyframes floatHero {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-dashboard {
+  animation: floatHero 6s ease-in-out infinite;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-stats {
+    gap: 30px;
+  }
+}
