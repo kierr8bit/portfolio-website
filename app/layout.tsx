@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 export const metadata = {
-  title: "Summit Virtual Assistant Solutions",
+  title: "BridgeCore Virtual Solutions",
   description:
     "Reliable virtual assistant services for growing businesses worldwide.",
 };

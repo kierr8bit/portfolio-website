@@ -3,86 +3,75 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import "@/styles/hero.css";
+import FloatingCards from "@/components/ui/FloatingCards";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#F7F9FC] pt-40 pb-24">
-      {/* Background Blur */}
-      <div className="absolute -top-32 -right-20 h-96 w-96 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
-      <div className="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-slate-200 blur-3xl opacity-50"></div>
+    <section className="hero">
+      {/* Background Effects */}
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-20 px-6 lg:flex-row">
-        {/* ================= LEFT CONTENT ================= */}
+      <div className="hero-bg"></div>
+      <div className="hero-grid"></div>
 
-        <div className="flex-1">
-          <h1 className="mt-8 text-5xl font-extrabold leading-tight tracking-tight text-[#0D1B3D] md:text-6xl lg:text-1xl">
-            Your Remote Team.
-            <br />
-            Built for Growth.
+      <div className="hero-container">
+        {/* LEFT */}
+
+        <div className="hero-left">
+          <h1 className="hero-title">
+            <span>Your Remote Team.</span>
+            <span>Built for Growth.</span>
           </h1>
 
-          <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
-            BridgeCore Virtual Solutions connects businesses with highly skilled
-            virtual professionals specializing in customer support,
-            administrative assistance, lead generation, operations, marketing,
-            and executive support—helping your business scale efficiently and
-            cost-effectively.
+          <p className="hero-description">
+            BridgeCore Virtual Solutions helps businesses scale with highly
+            trained Virtual Assistants, Customer Support Specialists,
+            Administrative Professionals, Marketing Assistants and Operations
+            Experts—allowing you to focus on growing your business.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-5">
-            <button className="rounded-xl bg-[#1E5BBE] px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#174ea2] hover:shadow-xl">
-              Book a Discovery Call
-            </button>
+          <div className="hero-buttons">
+            <button className="btn-primary">Send an Email</button>
 
-            <button className="flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 font-semibold text-[#0D1B3D] transition-all duration-300 hover:border-[#1E5BBE] hover:text-[#1E5BBE] hover:shadow-md">
+            <button className="btn-secondary">
               Explore Services
               <ArrowRight size={18} />
             </button>
           </div>
-
-          {/* Statistics */}
-
-          <div className="mt-16 flex flex-wrap gap-10">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0D1B3D]">24/7</h2>
-
-              <p className="mt-1 text-gray-500">Remote Support</p>
+          {/* 
+          <div className="hero-stats">
+            <div className="stat">
+              <h2>24/7</h2>
+              <span>Support</span>
             </div>
 
-            <div>
-              <h2 className="text-3xl font-bold text-[#0D1B3D]">Global</h2>
-
-              <p className="mt-1 text-gray-500">Talent Pool</p>
+            <div className="stat">
+              <h2>Global</h2>
+              <span>Talent Pool</span>
             </div>
 
-            <div>
-              <h2 className="text-3xl font-bold text-[#0D1B3D]">Flexible</h2>
-
-              <p className="mt-1 text-gray-500">Staffing Solutions</p>
+            <div className="stat">
+              <h2>Flexible</h2>
+              <span>Scaling</span>
             </div>
-          </div>
+          </div>*/}
         </div>
 
-        {/* ================= RIGHT IMAGE ================= */}
+        {/* RIGHT */}
 
-        <div className="flex flex-1 justify-center">
-          <div className="relative">
-            {/* Glow Behind Image */}
+        <div className="hero-right">
+          {/* Floating Card */}
 
-            <div className="absolute inset-0 rounded-3xl bg-blue-200 blur-3xl opacity-30"></div>
+          <FloatingCards />
 
-            {/* Dashboard */}
-
-            <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl">
-              <Image
-                src="/hero-dashboard.png"
-                alt="BridgeCore Virtual Solutions Dashboard"
-                width={700}
-                height={650}
-                priority
-                className="h-auto w-full object-cover"
-              />
-            </div>
+          <div className="dashboard-wrapper">
+            <Image
+              src="/hero-dashboard.png"
+              alt="Dashboard"
+              width={1200}
+              height={900}
+              priority
+              className="dashboard-image"
+            />
           </div>
         </div>
       </div>

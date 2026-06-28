@@ -3,7 +3,7 @@ import { CSSProperties } from "react";
 export default function Footer() {
   return (
     <footer style={styles.footer}>
-      <p>© 2026 Summit Virtual Assistant Solutions</p>
+      <p>© 2026 BridgeCore Virtual Solutions</p>
     </footer>
   );
 }

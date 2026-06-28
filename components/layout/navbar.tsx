@@ -72,7 +72,7 @@ export default function Navbar() {
           ))}
 
           <button className="rounded-xl bg-[#1E5BBE] px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#174ea2] hover:shadow-lg">
-            Book a Call
+            Contact Us
           </button>
         </nav>
 
