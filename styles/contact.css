@@ -577,18 +577,12 @@
   animation: fadeUp 0.8s ease both;
 }
 
-.contact-info {
-  animation: fadeUp 0.9s ease both;
-}
 .contact-info-bottom {
   margin-top: auto;
 
   padding-top: 30px;
 
   border-top: 1px solid #edf2f7;
-}
-.contact-form-card {
-  animation: fadeUp 1s ease both;
 }
 
 /* ==========================================================
@@ -607,18 +601,6 @@
   100% {
     transform: translateY(0px);
   }
-}
-
-.contact-info {
-  animation:
-    fadeUp 0.9s ease both,
-    floatingGlow 8s ease-in-out infinite;
-}
-
-.contact-form-card {
-  animation:
-    fadeUp 1s ease both,
-    floatingGlow 10s ease-in-out infinite;
 }
 
 /* ==========================================================
