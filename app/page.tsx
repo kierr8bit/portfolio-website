@@ -1,11 +1,13 @@
 import Hero from "@/components/sections/Hero";
+import WhyBridgeCore from "@/components/sections/WhyBridgeCore";
+import WhyChoose from "@/components/sections/WhyChoose";
 
 export default function Home() {
   return (
     <>
-      <main>
-        <Hero />
-      </main>
+      <Hero />
+      <WhyBridgeCore />
+      <WhyChoose />
     </>
   );
 }

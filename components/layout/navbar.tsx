@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,9 +33,8 @@ export default function Navbar() {
 
   const links = [
     { name: "Services", href: "#services" },
-    { name: "Industries", href: "#industries" },
     { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "FAQs", href: "#faqs" },
   ];
 
   return (
@@ -51,10 +52,10 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="BridgeCore Virtual Solutions"
-            width={200}
-            height={30}
+            width={150}
+            height={50}
             priority
-            className="h-auto w-auto"
+            className="h-auto w-60"
           />
         </Link>
 
@@ -65,13 +66,15 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="font-medium text-gray-700 transition-colors hover:text-[#1E5BBE]"
+              className="pr-10 text-[20px] mr-2 font-semibold text-gray-700 transition-all duration-300 hover:text-[#1E5BBE]"
             >
               {item.name}
             </Link>
           ))}
-
-          <button className="rounded-xl bg-[#1E5BBE] px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#174ea2] hover:shadow-lg">
+          <button
+            onClick={() => router.push("/contact")}
+            className="rounded-xl bg-[#1E5BBE] px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#174ea2] hover:shadow-lg"
+          >
             Contact Us
           </button>
         </nav>

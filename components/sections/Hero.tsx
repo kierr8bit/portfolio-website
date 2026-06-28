@@ -18,8 +18,8 @@ export default function Hero() {
 
         <div className="hero-left">
           <h1 className="hero-title">
-            <span>Your Remote Team.</span>
-            <span>Built for Growth.</span>
+            <span>Bridging Businesses</span>
+            <span>With World Class Talent.</span>
           </h1>
 
           <p className="hero-description">

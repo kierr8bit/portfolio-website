@@ -1,0 +1,188 @@
+.transition-section {
+  background: #0d1b3d;
+
+  padding: 55px 0;
+
+  overflow: hidden;
+}
+
+.transition-container {
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 0 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 70px;
+}
+
+/* LEFT */
+
+.transition-content {
+  flex: 1;
+
+  color: white;
+}
+
+.transition-badge {
+  display: inline-block;
+
+  padding: 10px;
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.transition-content h2 {
+  margin-top: px;
+
+  font-size: 40px;
+
+  font-weight: 800;
+  max-width: 1000px;
+}
+
+.transition-content h2 span {
+  color: #4fa2ff;
+}
+
+.transition-content p {
+  margin-top: 0px;
+
+  max-width: 350px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  line-height: 1.8;
+
+  font-size: 1rem;
+}
+
+.transition-content ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  list-style: none;
+
+  padding: 0;
+}
+
+.transition-content li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 1.05rem;
+
+  font-weight: 500;
+}
+
+.transition-content svg {
+  color: #4fa2ff;
+
+  flex-shrink: 0;
+}
+
+/* RIGHT */
+
+.transition-image {
+  border-radius: 100px;
+  flex: 1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  position: relative;
+}
+
+.transition-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+
+  height: 420px;
+
+  background: #1e5bbe;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.25;
+
+  right: 40px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.laptop {
+  position: relative;
+  border-radius: 50px;
+  width: 115%;
+
+  max-width: 760px;
+
+  height: 360px;
+
+  animation: floatLaptop 6s ease-in-out infinite;
+}
+
+@keyframes floatLaptop {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .transition-container {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .transition-content p {
+    margin: auto;
+  }
+
+  .transition-content li {
+    justify-content: center;
+  }
+
+  .transition-image {
+    justify-content: center;
+
+    margin-top: 40px;
+  }
+
+  .laptop {
+    width: 100%;
+  }
+}
